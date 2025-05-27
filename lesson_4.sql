@@ -43,5 +43,25 @@ WHERE
 ORDER BY salary_in_usd
 LIMIT 1;
 
+--3
+SELECT *
+FROM salaries
+WHERE emp_location = 'UA'
+ORDER BY salary_in_usd;
+
+--4
+SELECT *
+FROM salaries
+WHERE remote_ratio = 100
+ORDER BY salary_in_usd DESC
+LIMIT 5;
+
+--5
+SELECT *
+FROM salaries
+WHERE
+	year = 2023
+	AND company_size = 'M'
+	AND salary_in_usd > 100000;
 
 	
