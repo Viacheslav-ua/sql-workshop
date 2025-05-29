@@ -132,6 +132,10 @@ SELECT
 	DISTINCT remote_ratio * 0.01 AS remote_part
 FROM salaries;
 
+SELECT DISTINCT ROUND((remote_ratio/100.0),2) AS remote_part
+FROM salaries;
+
+
 -- 7
 SELECT *
 	, CASE
@@ -171,6 +175,9 @@ SELECT
 	, COUNT(remote_ratio)
 	, COUNT(company_location)
 	, COUNT(company_size)
+FROM salaries;
+
+SELECT COUNT(*) - COUNT(salary_in_usd)
 FROM salaries;
 
 --10
